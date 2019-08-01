@@ -32,15 +32,15 @@ git을 설치하기 위해서 [git 다운로드 페이지]에 접속하자. 다�
 
 [git 다운로드 페이지]: https://git-scm.com/downloads	"git 다운로드 페이지"
 
-![](\assets\images\git-download.jpg)
+![](\assets\images\run-on-local\git-download.jpg)
 
 특별히 옵션을 선택할 게 없으면 Next만 쭉 눌러서 설치해주자.
 
-![](\assets\images\git-installer.jpg)
+![](\assets\images\run-on-local\git-installer.jpg)
 
 git 설치가 완료되면 cmd, powershell, git bash 등의 터미널에서 git을 이용할 수 있게 된다.
 
-![](\assets\images\git-bash.jpg)
+![](\assets\images\run-on-local\git-bash.jpg)
 
 위의 이미지는 git bash에서 git 버전을 확인해본 모습이다.
 
@@ -130,11 +130,11 @@ minimal-mistakes 테마는 위에서도 언급했다시피 jekyll 기반으로 �
 
 [RubyInstaller]: https://rubyinstaller.org/downloads/	"RubyInstaller Site"
 
-![](\assets\images\rubyinstaller.jpg)
+![](\assets\images\run-on-local\rubyinstaller.jpg)
 
 설치 중에 MSYS2 development toolchain도 설치할건지 체크박스가 나오는데 같이 설치해주자.
 
-![](\assets\images\MSYS2_type.jpg)
+![](\assets\images\run-on-local\MSYS2_type.jpg)
 
 설치중에 위와 같이 선택지가 나오는데 1번 옵션 (MSYS2 base installation)을 선택해서 설치했다.
 
