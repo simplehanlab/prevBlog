@@ -1,33 +1,78 @@
 ---
-title: "Simplehan lab 로컬에서 구동하기"
+title: "minimal-mistakes 테마 로컬에서 구동하기"
 comments: true
 categories:
   - jekyll
+  - minimal-mistakes
 tags:
+  - github pages
   - jekyll
+  - minimal-mistakes
+  - git
   - ruby
 date: "2019-07-30 11:00"
 ---
-github pages를 이용하여 simplehan lab 블로그(현재 보고있는 블로그)를 개설하였다. jekyll 기반으로 만들어진 [minimal-mistakes] 테마를 이용하였다. 이를 이용하여 simplehan lab github에 올라와있는 git pages 소스를 내려받아서 수정 후 push를 하면 현재 호스트되고 있는 simplehan lab 블로그가 자동으로 갱신이 된다.
+블로그를 시작하였다. 처음엔 티스토리를 이용하여 블로그를 개설하려 했으나 github에서 무료로 제공하는 [github pages] 호스팅 서비스가 있길래 이를 이용해보기로 했다. github pages는 [jekyll]로 동작하기 때문에 jekyll의 공개된 테마 중 인기가 많은 [minimal-mistakes] 테마를 이용하였다.
 
+[github pages]: https://pages.github.com/	"github pages"
+[jekyll]: https://jekyllrb-ko.github.io/	"jekyll"
 [minimal-mistakes]: https://github.com/mmistakes/minimal-mistakes	"minimal-mistakes github"
+
+이 jekyll *(혹은 jekyll 기반의 테마)*을 이용하여 자신만의 페이지를 구성 후 github의 repository에 소스를 push하면 해당 소스가 배포되어 정적 웹 사이트가 호스팅되기 시작한다.
 
 그러나 push를 한다고 해서 반영 및 배포가 바로바로 되지는 않기 때문에 지금 보고 있는 페이지가 수정이 완료가 된건지, 아직 배포가 안된건지 알기가 힘들다. 그리고 잘못 수정된 파일이 올라갈수도 있다. 이러한 문제점들을 방지하기 위해 local 환경에서 사이트를 띄워볼 수 있는데 여기에서 그 방법을 설명하려 한다.
 
 
 
-## 소스코드 내려받기
+## Git 설치
 
-일단 simplehanlab github에서 소스를 clone 한다.
+minimal-mistakes 테마는 github에 올라가 있기 때문에 이 소스를 내려받기 위해선 git이 필요하다. *(git이 없어도 zip 파일로 소스를 내려받을 순 있지만 추후 자신의 소스를 github에 올리기 위해서도 필요하기 때문에 git을 설치하는 것이 좋다.)*
+
+git을 설치하기 위해서 [git 다운로드 페이지]에 접속하자. 다운로드 페이지에서 자신의 OS에 맞게 다운로드를 받아서 설치를 진행하자.
+
+[git 다운로드 페이지]: https://git-scm.com/downloads	"git 다운로드 페이지"
+
+![](\assets\images\git-download.jpg)
+
+특별히 옵션을 선택할 게 없으면 Next만 쭉 눌러서 설치해주자.
+
+![](\assets\images\git-installer.jpg)
+
+git 설치가 완료되면 cmd, powershell, git bash 등의 터미널에서 git을 이용할 수 있게 된다.
+
+![](\assets\images\git-bash.jpg)
+
+위의 이미지는 git bash에서 git 버전을 확인해본 모습이다.
+
+
+
+## minimal-mistakes 소스코드 내려받기
+
+[minimal-mistakes github]에서 소스를 clone 한다. *(minimal-mistakes github에서 자신의 github로 fork 받는 방법도 있다. 본인이 편한 방법으로 소스를 내려받자.)*
+
+[minimal-mistakes github]: https://github.com/mmistakes/minimal-mistakes	"minimal-mistakes github"
 
 ```terminal
-git clone https://github.com/simplehanlab/simplehanlab.github.io.git
+git clone https://github.com/mmistakes/minimal-mistakes.git
 ```
 
-그러면 아래와 같은 구조의 소스를 clone 받게 된다.
+clone받은 소스에서 불필요한 파일들을 제거해야된다. 그 파일들은 다음과 같다:
+
+- `.editorconfig`
+- `.gitattributes`
+- `.github`
+- `/docs`
+- `/test`
+- `CHANGELOG.md`
+- `minimal-mistakes-jekyll.gemspec`
+- `README.md`
+- `screenshot-layouts.png`
+- `screenshot.png`
+
+그러면 아래와 같은 구조가 완성된다. *(구조가 100% 맞지 않을 수 있다.)*
 
 ```bash
-simplehanlab.github.io
+minimal-mistakes
 ├── _data                      # 테마 커스터마이징 데이터
 |  ├── navigation.yml          # 네비게이션(메뉴) 데이터
 |  └── ui-text.yml             # UI의 텍스트 (언어별)
@@ -73,19 +118,27 @@ simplehanlab.github.io
 └── package.json               # NPM build scripts
 ```
 
+*minimal-mistakes 테마를 받는 방법은 clone, fork 외에도 존재한다. gem기반으로 내려받는 방법도 있고, config 파일에서 remote를 지정하여 소스를 내려받지 않고 network 상으로 이용하는 방법도 존재한다. 해당 방법들은 minimal-mistakes 가이드 글의 [Quick-Start Guide]를 참조하자.*
+
+[Quick-Start Guide]: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/	"minimal-mistakes: 'Quick-Start Guide'"
+
 
 
 ## Ruby 설치
 
-이 블로그는 위에서도 언급했다시피 jekyll 기반으로 만들어져 있다. 그러므로 이 소스를 로컬 환경에서 구동하기 위해선 jekyll이 필요한데, jekyll은 Gem이라는 Ruby 기반의 패키지 매니저를 통해서 받을 수 있다. 이를 위해 먼저 Ruby를 설치해야 한다. [RubyInstaller]에 접속해서 Installer를 다운받도록 하자.
+minimal-mistakes 테마는 위에서도 언급했다시피 jekyll 기반으로 만들어져 있다. 그러므로 이 소스를 로컬 환경에서 구동하기 위해선 jekyll이 필요한데, jekyll은 Gem이라는 Ruby 기반의 패키지 매니저를 통해서 받을 수 있다. 이를 위해 먼저 Ruby를 설치해야 한다. [RubyInstaller]에 접속해서 Installer를 다운받도록 하자.
 
 [RubyInstaller]: https://rubyinstaller.org/downloads/	"RubyInstaller Site"
 
 ![](\assets\images\rubyinstaller.jpg)
 
-설치 중에 MSYS2 development toolchain도 설치할건지 체크박스가 나오는데 같이 설치해주자. (후에 선택지가 나오면 base installation 선택)
+설치 중에 MSYS2 development toolchain도 설치할건지 체크박스가 나오는데 같이 설치해주자.
 
-Devkit이 포함된 Ruby를 설치하면 Gem도 사용이 가능해진다. 이제 gem을 이용해서 jekyll과 gem 관리를 위한 bundler를 설치해보자.
+![](\assets\images\MSYS2_type.jpg)
+
+설치중에 위와 같이 선택지가 나오는데 1번 옵션 (MSYS2 base installation)을 선택해서 설치했다.
+
+Devkit이 포함된 Ruby를 설치하면 Gem도 사용이 가능해진다. 이제 gem을 이용해서 jekyll과 gem 관리를 위한 bundler를 설치해보자. 진행은 **Windows cmd**에서 진행했다.
 
 ```terminal
 gem install jekyll bundler
