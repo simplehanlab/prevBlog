@@ -162,6 +162,8 @@ bundle exec jekyll serve	# --port xxxx 옵션을 통하여 포트 지정 가능
 
 ## 에러 case
 
+### Invalid CP949 character "\xE2"
+
 로컬에서 구동 시 아래와 같은 에러가 출력될 수 있다.
 
 ```terminal
@@ -187,5 +189,16 @@ chcp 65001
 ```
 bundle exec jekyll serve	// --port xxxx 옵션을 통하여 포트 지정 가능
 ```
+
+### incompatible encoding regexp match
+
+로컬에서 구동 시 아래와 같은 에러가 출력될 수 있다.
+
+```terminal
+...
+jekyll 3.8.5 | Error:  incompatible encoding regexp match (CP949 regexp with UTF-8 string)
+```
+
+이는 jekyll 프로젝트 경로 상에 한글명의 폴더가 들어가 있는 경우이다. 한글을 바꿔주거나 다른 경로로 이동하여 다시 실행해보자.
 
 [http://jekyllrb-ko.github.io/docs/windows/#%EC%9D%B8%EC%BD%94%EB%94%A9](http://jekyllrb-ko.github.io/docs/windows/#%EC%9D%B8%EC%BD%94%EB%94%A9)
