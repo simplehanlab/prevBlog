@@ -48,7 +48,7 @@ git 설치가 완료되면 cmd, powershell, git bash 등의 터미널에서 git�
 
 ## minimal-mistakes 소스코드 내려받기
 
-[minimal-mistakes github]에서 소스를 clone 한다. *(minimal-mistakes github에서 자신의 github로 fork 받는 방법도 있다. 본인이 편한 방법으로 소스를 내려받자.)*
+[minimal-mistakes github]에서 소스를 clone 한다. **cmd**에서 진행했다. *(minimal-mistakes github에서 자신의 github로 fork 받는 방법도 있다. 본인이 편한 방법으로 소스를 내려받자.)*
 
 [minimal-mistakes github]: https://github.com/mmistakes/minimal-mistakes	"minimal-mistakes github"
 
