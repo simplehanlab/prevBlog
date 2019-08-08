@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /about/
-title: "우리는?"
+title: "우리에 대해"
 author_profile: true
 ---
 
