@@ -18,7 +18,7 @@ jekyll, minimal-mistakes 등에 관한 설명은 지난 포스트를 참조하�
 
 [minimal-mistakes 테마 로컬에서 구동하기]
 
-[minimal-mistakes 테마 로컬에서 구동하기]: http://localhost:5000/jekyll/minimal-mistakes/run-on-local/
+[minimal-mistakes 테마 로컬에서 구동하기]: https://simplehanlab.github.io/jekyll/minimal-mistakes/run-on-local/
 
 포스트 작성 전에 VSCode와 Typora를 설치해보자.
 

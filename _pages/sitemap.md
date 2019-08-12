@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Sitemap"
+title: "사이트맵"
 permalink: /sitemap/
 author_profile: false
 ---

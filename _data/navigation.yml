@@ -1,8 +1,8 @@
 # main links
 main:
-  - title: "About Us"
+  - title: "우리에 대해"
     url: /about/
-  - title: "Posts by Category"
+  - title: "카테고리 별 포스트"
     url: /categories/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
