@@ -14,7 +14,7 @@ typora-root-url: ..\assets\images\letsencrypt
 
 지난 시간에는 nginx 에 let's encrypt 를 이용하여 무료 SSL 인증서를 적용해 보았다. 이번 시간에는 SSL 인증서로 https 접속이 가능해진 nginx 에 톰캣을 연결해보도록 하자!
 
-nginx 설치 방법은 [Letsencrypt + Nginx SSL인증서(HTTPS) 적용](http://localhost:4000/ssl/ssl-letsencrypt/) 포스팅에서 nginx 설치 부분을 참고 하도록 하자
+nginx 설치 방법은 [Letsencrypt + Nginx SSL인증서(HTTPS) 적용](https://simplehanlab.github.io/ssl/ssl-letsencrypt/) 포스팅에서 nginx 설치 부분을 참고 하도록 하자
 
 ### 환경
 
