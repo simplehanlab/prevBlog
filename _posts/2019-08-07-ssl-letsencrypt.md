@@ -146,6 +146,7 @@ server {
 }
 server {
         listen 443;
+        listen [::]:443;
         ssl on;
         server_name _;
 
@@ -193,3 +194,5 @@ nginx index 화면이 정상적으로 나올 것이다.
 
 
 다음 게시글에서는 SSL 설정이 완료된 Nginx 에 Tomcat 을 연동하는 방법을 설명해 보겠다.
+
+바로가기: [Nginx + Tomcat8 연동](http://localhost:4000/ssl/ssl-nginx-tomcat/)
