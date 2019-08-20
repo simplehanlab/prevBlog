@@ -202,3 +202,37 @@ jekyll 3.8.5 | Error:  incompatible encoding regexp match (CP949 regexp with UTF
 ```
 
 이는 jekyll 프로젝트 경로 상에 한글명의 폴더가 들어가 있는 경우이다. 한글을 바꿔주거나 다른 경로로 이동하여 다시 실행해보자.
+
+### There was an error parsing \`Gemfile\`
+
+```terminal
+[!] There was an error parsing `Gemfile`: There are no gemspecs at [folder]. Bundler cannot continue.
+
+ #  from [folder]/Gemfile:2
+ #  -------------------------------------------
+ #  source "https://rubygems.org"
+ >  gemspec #  source "https://rubygems.org"
+ #  -------------------------------------------
+```
+
+**bundle install** 시 Gemfile이 없거나 파일이 제대로 작성되어 있지 않을 때 위와 같은 에러가 출력될 수 있다. Gemfile이 이상이 없는지 확인해보자. 참고용으로 현재 이 블로그의 Gemfile 내용을 아래에 작성해 둘테니 잘 안된다면 복사해서 붙여넣어보자.
+
+```ruby
+source "https://rubygems.org"
+
+gem "github-pages", group: :jekyll_plugins
+
+gem "tzinfo-data"
+gem "wdm", "~> 0.1.0" if Gem.win_platform?
+
+# If you have any plugins, put them here!
+group :jekyll_plugins do
+  gem "jekyll-paginate"
+  gem "jekyll-sitemap"
+  gem "jekyll-gist"
+  gem "jekyll-feed"
+  gem "jemoji"
+  gem "jekyll-algolia"
+  gem "jekyll-include-cache"
+end
+```
