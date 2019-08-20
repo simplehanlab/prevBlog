@@ -12,7 +12,7 @@ date: "2019-08-07 15:00"
 
 ## SSH 란?
 
-SSH (Secure Shell Protocol) 이란 네트워크 프로토콜중 하나로, 컴퓨터와 컴퓨터가 Public Network를 통해 서로 통신(연결)을 할때 보안적으로 안전하게 사용하기 위한 프로토콜 입니다.
+SSH (Secure Shell Protocol) 이란 네트워크 프로토콜중 하나로, 컴퓨터와 컴퓨터가 Public Network를 통해 서로 통신(연결)을 할때 보안적으로 안전하게 사용하기 위한 프로토콜
 
 ## Ubuntu 18.04 에 SSH 적용하기
 
@@ -24,7 +24,7 @@ $ dpkg -l | grep openssh
 
 ![](\assets\images\ssh-how_to_setup_ssh\dpkg-openssh.jpg)
 
-※ 우분투를 설치하시게 되면 기본적으로 openssh-client 는 설치가 되어있으실 겁니다. 
+※ 우분투를 설치하시게 되면 기본적으로 openssh-client 는 설치가 되어있을 것이다.
 
 #### 2.openssh-server 설치
 

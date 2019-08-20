@@ -20,7 +20,7 @@ typora-root-url: ..\assets\images\letsencrypt
 
 - 웹 사이트에 HTTPS (SSL / TLS)를 사용하기 위해 필요한 디지털 인증서를 무료로 제공
 - 만료 기간이 90일, 만료 기간전에 수동으로 인증서를 갱신 또는 crontab, certbot auto 를 활용한 자동 갱신
-- 자세한 내용은  [ Let's Encrypt 공식 사이트](https://letsencrypt.org/about/) 에서 확인 하시기 바랍니다.
+- 자세한 내용은  [ Let's Encrypt 공식 사이트](https://letsencrypt.org/about/) 에서 확인
 
 ## Nginx 설치
 
@@ -40,7 +40,7 @@ Nginx 화면이 나오지 않을 시에는
 $ sudo service nginx restart
 ```
 
-명령어로 nginx 를 재시작 해본 뒤 다시 웹 브라우저에서 접속시도 nginx index 화면이 제대로 나온다면 이제 Let's Encrypt 를 이용하여 SSL 인증서를 받아보자!!
+명령어로 nginx 를 재시작 해본 뒤 다시 웹 브라우저에서 접속시도 nginx index 화면이 제대로 나온다면 이제 Let's Encrypt 를 이용하여 SSL 인증서를 받아보자
 
 ## certbot  설치
 
@@ -59,11 +59,11 @@ $ sudo apt-get install python-certbot-nginx
 
 
 
-SSL 인증을 하기에 앞서 구매한 도메인이 없다면, certbot 에서 해당 서버에 접근을 할 수가 없어 인증이 되지 않는다. 잠시 테스트용으로 ngrok 을 사용하여 임시 도메인을 사용해 테스트를 해보자!
+SSL 인증을 하기에 앞서 구매한 도메인이 없다면, certbot 에서 해당 서버에 접근을 할 수가 없어 인증이 되지 않는다. 잠시 테스트용으로 ngrok 을 사용하여 임시 도메인을 사용해 테스트를 해보자
 
 ## Ngrok 설치 및 실행 
 
- [ngrok 홈페이지](https://dashboard.ngrok.com/get-started)에 들어가 간단한 회원가입 절차를 진행한 후에 운영체제에 맞는 ngrok 을 다운 받은 뒤 매뉴얼에 따라 ngrok을 실행해 보자 (저는 ubuntu 64bit 여서 linux 를 받았습니다.) 
+ [ngrok 홈페이지](https://dashboard.ngrok.com/get-started)에 들어가 간단한 회원가입 절차를 진행한 후에 운영체제에 맞는 ngrok 을 다운 받은 뒤 매뉴얼에 따라 ngrok을 실행해 보자 (이번 포스트 환경은 ubuntu 64bit 이므로 linux 를 다운로드한다.) 
 
 ![img](\assets\images\letsencrypt\download-ngrok.jpg)
 
@@ -77,7 +77,7 @@ $ sudo ./ngrok http http://localhost
 
 ![img](\assets\images\letsencrypt\exec-ngrok.jpg)
 
-Fowarding 부분에 있는 http 주소를 복사( CTRL + C 는 ngrok을 중지시키는 단축키이므로 GUI 가 있는 운영체제라면 마우스 오른쪽 클릭을 활용하거나 직접 주소를 타이핑 하자!!!) 하여 웹 브라우저에서 들어가보면 nginx index 창이 뜨는걸 확인 할수 있다. 
+Fowarding 부분에 있는 http 주소를 복사( CTRL + C 는 ngrok을 중지시키는 단축키이므로 GUI 가 있는 운영체제라면 마우스 오른쪽 클릭을 활용하거나 직접 주소를 타이핑 하자!!!) 하여 웹 브라우저에서 들어가보면 nginx index 창이 뜨는걸 확인할 수 있다. 
 
 이제 ngrok을 실행 시켜 놓은 상태에서 새로운 터미널 창을 연뒤 certbot 을 이용해 인증서를 발급해 보도록 하자
 
@@ -127,6 +127,7 @@ $ sudo vim /etc/nginx/site-available/default
 파일 내부를 확인해 보면 80 port 설정에 대한 server 블록이 존재할 것이다. 그 server 블록 아래에 443(SSL) port 에 대한 server 블록을 추가해 주자 
 
 ```shell
+# 80 포트의 대한 설정은 수정 하지 않는다. 
 server {
 	    ...
         listen 80;
@@ -144,10 +145,11 @@ server {
         }
         ...
 }
+# 443 포트를 설정하기 위한 server 블록 추가
 server {
         listen 443;
         listen [::]:443;
-        ssl on;
+        ssl on; // ssl 을 활성화
         server_name _;
 
         ssl_certificate /etc/letsencrypt/live/8e7dcf95.ngrok.io/fullchain.pem;
