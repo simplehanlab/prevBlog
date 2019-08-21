@@ -8,7 +8,6 @@ tags:
   - SSL
   - letsencrypt
 date: "2019-07-30 11:00"
-typora-root-url: ..\assets\images\letsencrypt
 ---
 ### 환경
 

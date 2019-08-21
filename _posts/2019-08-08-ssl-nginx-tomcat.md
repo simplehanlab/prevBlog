@@ -9,7 +9,6 @@ tags:
   - letsencrypt
   - secure
 date: "2019-07-30 11:00"
-typora-root-url: ..\assets\images\letsencrypt
 ---
 
 지난 시간에는 nginx 에 let's encrypt 를 이용하여 무료 SSL 인증서를 적용해 보았다. 이번 시간에는 SSL 인증서로 https 접속이 가능해진 nginx 에 톰캣을 연결해 보도록 할 것이다.

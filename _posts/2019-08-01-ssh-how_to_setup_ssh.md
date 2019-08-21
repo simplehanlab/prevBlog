@@ -22,7 +22,7 @@ SSH (Secure Shell Protocol) 이란 네트워크 프로토콜중 하나로, 컴�
 $ dpkg -l | grep openssh
 ```
 
-![](\assets\images\ssh-how_to_setup_ssh\dpkg-openssh.jpg)
+![img](\assets\images\ssh-how_to_setup_ssh\dpkg-openssh.jpg)
 
 ※ 우분투를 설치하시게 되면 기본적으로 openssh-client 는 설치가 되어있을 것이다.
 
@@ -32,7 +32,7 @@ $ dpkg -l | grep openssh
 $ apt-get install openssh-server
 ```
 
-![](\assets\images\ssh-how_to_setup_ssh\install-openssh-server.jpg)
+![img](\assets\images\ssh-how_to_setup_ssh\install-openssh-server.jpg)
 
 #### 3. openssh-server 설치 확인
 
@@ -40,7 +40,7 @@ $ apt-get install openssh-server
 $ dpkg -l | grep openssh
 ```
 
-![](\assets\images\ssh-how_to_setup_ssh\check-install-openssh.jpg)
+![img](\assets\images\ssh-how_to_setup_ssh\check-install-openssh.jpg)
 
 #### 3.Putty 로 ssh 접속 확인하기
 
@@ -50,15 +50,15 @@ $ dpkg -l | grep openssh
 $ ifconfig
 ```
 
-![](\assets\images\ssh-how_to_setup_ssh\check-ipadress.jpg)
+![img](\assets\images\ssh-how_to_setup_ssh\check-ipadress.jpg)
 
 #####  - Putty 접속 확인 
 
-![](\assets\images\ssh-how_to_setup_ssh\putty.jpg)
+![img](\assets\images\ssh-how_to_setup_ssh\putty.jpg)
 
 우분투 설치시 설정한 계정과 비밀번호를 입력 하면 로그인이 되는 것을 확인할 수 있다.
 
-![](\assets\images\ssh-how_to_setup_ssh\connect.jpg)
+![img](\assets\images\ssh-how_to_setup_ssh\connect.jpg)
 
 
 
