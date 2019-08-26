@@ -158,14 +158,14 @@ date: "2019-08-23 14:06"
 
   그후 firebase 홈페이지에 접속하여 다음과 같이 진행합니다.
 
-  ![img](\assets\images\ios\firebase-1.png)
-  ![img](\assets\images\ios\firebase-2.png)
-  ![img](\assets\images\ios\firebase-3.png)
+  ![img](\assets\images\ios\firebase-1.PNG)
+  ![img](\assets\images\ios\firebase-2.PNG)
+  ![img](\assets\images\ios\firebase-3.PNG)
   <!-- ![img](\assets\images\ios\2017-09-17_22-33-53-1024x531.png) -->
   여기서 주의해야 할 부분은, 번들 ID는 프로젝트에서 생성한 번들 ID와 같아야합니다.
-  ![img](\assets\images\ios\firebase-4.png)
+  ![img](\assets\images\ios\firebase-4.PNG)
   GoogleService-info.plist 파일을 다운로드 받은 후 프로젝트 내부 폴더로 옮겨줍니다.
-  ![img](\assets\images\ios\firebase-5.png)
+  ![img](\assets\images\ios\firebase-5.PNG)
   <!-- ![img](\assets\images\ios\2017-09-17_22-35-31.png) -->
   전부 설정 후html에서 토큰 설정후 사용할 수 있습니다. (사진과 다르게 현재 프로젝트에서는 resources 폴더 내부에 저장하여 사용중입니다.) 또한 Push 사용을 위해 인증서 업로드가 필요한데 애플 개발자 사이트에서 인증서를 받은후 FCM에 업로드 하여 등록 가능합니다.
   ![img](\assets\images\ios\1_DXho7RVN7BVRBHnFY2GQDQ.png)
