@@ -4,6 +4,4 @@ permalink: /about/
 title: "우리는?"
 author_profile: true
 ---
-한글도 잘 나와요
-
-심플한 개발자들
+아직 블로그의 틀을 잡아가는 중입니다.
