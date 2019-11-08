@@ -375,3 +375,79 @@ date: "2019-11-06 17:25"
   ![img](\assets\images\google-maps-react\img6.png)
 
   이렇게 InfoWindow가 출력되는 것을 확인할수 있습니다.
+
+  ### 3. 확대/축소 이벤트  
+
+  이번에는 ref를 활용하여 Map의 데이터를 가져온 후
+  
+  마우스 휠의 이벤트를 감지하여
+  
+  state의 값으로 저장하도록 만들어 보겠습니다.
+
+  먼저 이벤트를 감지할 수 있도록 세팅합니다.  
+  ```javascript
+  componentDidMount = () => {
+    window.addEventListener("DOMMouseScrol", this.onWheelEvent, false);
+    window.onmousewheel = document.onmousewheel = this.onWheelEvent;
+  }
+  ```
+
+  그 후 마우스가 감지되었을때 사용할 이벤트인 
+
+  onWheelEvent 를 생성합니다.
+  ```javascript
+  onWheelEvent = (event) =>{
+    var delta = 0;
+    if (!event) event = window.event;
+    if (event.wheelDelta) {
+        delta = event.wheelDelta/120;
+        if (window.opera) delta = -delta;
+    } else if (event.detail) delta = -event.detail/3;
+    if (delta) this.onWheelHandler(delta);
+  }
+  ```
+
+  해당 이벤트가 감지되었을때 처리된 값을
+
+  받아줄 핸들러를 생성합니다.
+  ```javascript
+  onWheelHandler = (delta) => {
+    let map = this.mapRef.map;
+    console.log("lat::"+map.center.lat());
+    console.log("lng::"+map.center.lng());
+    console.log("zoom::"+map.zoom);
+    if (delta < 0) {
+      console.log("wheel down");
+    }
+    else {
+      console.log("wheel up");
+    };
+    this.setState({
+      zoomIndex: map.zoom
+    });
+  }
+  ```
+
+  참고로 리액트의 ref 사용법은
+  
+  다음과 같이 사용됩니다
+  ```javascript
+  ref={ref => this.mapRef = ref}
+  ```
+
+  이런식으로 속성값을 태그에 넣어주시면 ref값이 저장되어
+  
+  해당 엘리먼트를 확인 가능합니다.
+
+  이경우 결과 값은 다음 사진과 같습니다.
+  ![img](\assets\images\google-maps-react\2-img-1.png)
+
+  다만 해당 방식으로 처리할 경우엔 스마트폰의 확대 및 축소
+
+  감지를 하지 못하게 되어 원래
+
+  사용되던 onZoomChanged 함수를 사용 하였으나,
+
+  작동되지않아 해당 방식으로 web에서나마 
+  
+  처리되도록 만들어 보았습니다.
