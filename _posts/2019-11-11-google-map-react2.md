@@ -1,5 +1,5 @@
 ---
-title: "Google Map API React2"
+title: "Google Map API React에서 사용하기 (2)"
 comments: true
 categories:
   - react
@@ -9,7 +9,7 @@ tags:
   - node
   - google
   - map
-date: "2019-11-11 17:35"
+date: "2019-11-11 17:25"
 ---
 
 ### 1. 구글 맵 언어 설정

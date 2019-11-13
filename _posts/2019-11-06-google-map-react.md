@@ -1,5 +1,5 @@
 ---
-title: "Google Map API React"
+title: "Google Map API React에서 사용하기"
 comments: true
 categories:
   - react
@@ -14,9 +14,17 @@ date: "2019-11-06 17:25"
 
 ### 1. 시작하기
 
-  이번엔 React를 활용하여 Google Map Api를 사용하는 방법을 
+  지도를 사용해야하는 프로젝트가 있어서,
+  
+  국내뿐아닌 해외도 보기 쉬운 지도 관련 API를 찾다보니
 
-  작성 하겠습니다.
+  Google maps보다 더 좋은것을 찾기 힘들어
+
+  해당 API와 React를 같이 사용하여 작업해봤습니다.
+
+  저와 같은 분들을 위해 React로 Google Map API를 사용하는 방법을 
+
+  작성 해 보겠습니다.  
 
   먼저 API를 사용하기 위해 KEY값이 필요하므로 
 
