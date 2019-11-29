@@ -22,18 +22,23 @@ date: "2019-11-28 18:39"
 
   사용법은 매우 간단합니다.
 
-  먼저 [Lightwidget](https://lightwidget.com/){:target="_blank"} 사이트에 접속하여
+  먼저 [Lightwidget](https://lightwidget.com/){:target="_blank"} (https://lightwidget.com/) 사이트에 접속하여
 
   인스타그램 계정으로 로그인한 후 액세스 권한을 받아옵니다.
 
   ![img](\assets\images\insta\instagram-token.png)
 
-  그 후 아래와 같이 보이는 페이지에서 
+  그 후 아래와 같이 보이는 페이지에서 원하는 값을 설정 합니다.
 
   ![img](\assets\images\insta\2019-11-28 185648.png)
 
-  원하는 값을 설정 한 후, 아래로 내려 GetCode!를 누르면 
+  아래로 내려 GetCode!를 누르게 되면,
 
-  사용할수있는 iframe 태그를 복사할수 있게 주는데, 그대로 붙여넣으면
+  사용할수있는 HTML iframe 태그를 주게 됩니다.
 
-  사용이 가능합니다.
+  ![img](\assets\images\insta\last.png)
+
+  ![img](\assets\images\insta\code.png)
+
+  ![img](\assets\images\insta\2019-11-29 110155.png)
+
