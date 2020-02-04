@@ -22,15 +22,14 @@ date: "2020-02-04 17:35"
   우선 CSS와 관련한 설정정보를 변경해 주어야한다 이는 프로젝트 생성하면 볼수 없도록 내부에 들어있다.
   프로젝트를 생성 후 콘솔에서 명령어를 입력하여 밖으로 빼주어야 한다.
     
-    ◎ yarn eject 또는 npm eject
+    yarn eject 또는 npm eject
     
   적용이 완료되면 Webpack 설정을 변경해야 한다.
   
-  프로젝트 디렉토리 내에서 아래 파일을 열어서 'css-loader'를 찾아서 설정을 바꾸어 준다.
+  프로젝트 디렉토리 내에서 아래 파일에 'css-loader'를 찾아서 설정을 바꾸어 준다.
 
-  ```java
   'config/webpack.config.dev.js'
-
+  ```java
   {
     loader: require.resolve('css-lader'),
     options: {
@@ -41,9 +40,8 @@ date: "2020-02-04 17:35"
   },
   ```
 
-  ```java
   'config/webpack.config.prod.js'
-
+  ```java
   {
     loader: require.resolve('css-lader'),
     options: {
@@ -58,17 +56,16 @@ date: "2020-02-04 17:35"
   
 ### 2. CSS Module
 
-  설정을 변경 후 yarn start 을 입력하면 이제 일반 CSS가 적용되지 않는다.
+  설정을 변경 후 yarn start 을 입력하면 일반 CSS가 적용되지 않는다.
   
   CSS Module을 사용하면 CSS 파일을 불러온 컴포넌트 내부에서만 작동한다.
   적용할 파일에 CSS 파일을 불러올때 래퍼런스 안에 넣어주어 모듈처럼 사용하는 것이다.
 
-  ```java
   'App.css'
-
+  ```java
   .excemple_bluebox {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     background-color: blue;
   }
 
@@ -88,12 +85,13 @@ date: "2020-02-04 17:35"
   export default App;
   ```
 
+
 ※ CSS Module 의 사용법
 ```java
 '글로벌 스타일 사용'
 :global .excemple_bluebox {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   background-color: blue;
 }
 
@@ -113,11 +111,12 @@ date: "2020-02-04 17:35"
 }
 ```
 
+
 ### 3. CSS 전처리기
 
-  CSS 전처리기는 CSS 문서의 작성에 도움을 주는 도구이다
+  CSS 전처리기는 CSS 문서의 작성에 도움을 주는 도구이다.
   CSS를 작성할 때 반복적인 작업이 요구되고 클래스의 상속과 같은 사항으로
-  문서는 양이 많아지고 이로 인해 유지관리에 많은 영향을 준다
+  문서는 양이 많아지고 이로 인해 유지관리에 많은 영향을 준다.
 
   CSS 전처리기는 이런 문제점들을 변수, 함수, 상속 등 프로그래밍 개념을 사용해 해결한다.
 
@@ -136,6 +135,8 @@ date: "2020-02-04 17:35"
     CSS 전처리기는 프로그래밍 한 요소를 접목했기 때문에 분기문 처리, 변수의 이해, CSS함수의 이해 등
     개발적인 요소를 알아야 하기 때문이다.
 
+
+
   CSS 전처리기의 기능을 간단하게 알아보자.
 
   ex 1)
@@ -145,17 +146,18 @@ date: "2020-02-04 17:35"
   대부분 하나의 파일 안에 color-set 을 모두 정의하여 사용된다.
 
   ```java
-  $primary-color: #fff
+  $primary-color: #fff;
+  $secondary-color: #000;
 
   .class-A {
-    background-color: $primary-color
+    background-color: $primary-color;
   }
 
   .class-B {
-    background-color: $primary-color
+    background-color: $secondary-color;
   }
-
   ```
+
   ex 2)
   각 CSS 전처리기에는 내장함수(Built-in Functions)가 존재한다.
   이 내장 함수는 이미 전처리기 내에 포함된 함수로 우리는 필요한 값들만 전달하면
@@ -163,12 +165,12 @@ date: "2020-02-04 17:35"
   색상과 퍼센티지를 지정해 주면 거기에 알맞는 값을 출력해 준다.
 
   ```java
-  $color: #2ecc71
-  $buttonDark: darken($buttonColor, 10%)
+  $color: #2ecc71;
+  $buttonDark: darken($buttonColor, 10%);
 
   .button {
     background-color: $color;
-    box-shadow: 0px 5px 0px $buttonDark
+    box-shadow: 0px 5px 0px $buttonDark;
   }
   ```
 
@@ -192,13 +194,13 @@ date: "2020-02-04 17:35"
   }
 
   .class-A {
-      color: red
-      padding: 10px
+      color: red;
+      padding: 10px;
   }
 
   .class-B {
-      @extend: .class-A
-      border: 1px solid red
+      @extend: .class-A;
+      border: 1px solid red;
   }
 
   ```
@@ -217,12 +219,12 @@ date: "2020-02-04 17:35"
   }
 
   .class-A, .class-B {
-      color: red
-      padding: 10px
+      color: red;
+      padding: 10px;
   }
 
   .class-B {
-      border: 1px solid red
+      border: 1px solid red;
   }
   ```
   
