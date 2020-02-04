@@ -1,5 +1,5 @@
 ---
-title: "안드로이드 BLE 통신"
+title: "React Component Styling"
 comments: true
 categories:
   - react
