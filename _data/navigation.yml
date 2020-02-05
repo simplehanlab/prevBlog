@@ -12,3 +12,21 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+sidebar-sample:
+  - title: "react"
+    url: /categories/#react
+  - title: "Spring"
+    url: /categories/#spring
+  - title: "iOS"
+    url: /categories/#ios
+  - title: "jekyll"
+    url: /categories/#jekyll
+  - title: "minimal-mistakes"
+    url: /categories/#minimal-mistakes
+  - title: "SSL"
+    url: /categories/#ssl
+  - title: "tensorflow"
+    url: /categories/#tensorflow
+  - title: "SSH"
+    url: /categories/#ssh
