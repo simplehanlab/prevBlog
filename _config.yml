@@ -110,7 +110,7 @@ author:
   name             : "Simplehan Developers"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "We are **amazing** developers."
-  location         : "Anywhere"
+  location         : "Somewhere"
   email            :
   links:
     - label: "Email"
