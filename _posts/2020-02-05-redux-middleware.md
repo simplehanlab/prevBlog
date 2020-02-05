@@ -17,7 +17,7 @@ date: "2020-02-05 20:35"
   리덕스 미들웨어(middleware)는 액션을 디스패치했을 때 리듀서에서 이를 처리하기 전에 
   사전에 지정된 작업들을 실행한다. 미들웨어는 액션과 리듀서 사이의 중간자라고 볼 수 있다.
 
-  ![img](\assets\images\react\react-middleware.png)
+  ![img](\assets\images\react\middleware.png)
 
 
 ### 2. Redux-middleware를 사용하는 이유
