@@ -115,6 +115,10 @@ export default App;
 
 라우트를 설정 할 때에는 Route 컴포넌트를 사용하고, 경로는 path 값으로 설정한다.
 
+
+결과 - 
+
+
 첫번째 라우트 / 는 Home 컴포넌트를, 두번째 라우트 /about 는 About 컴포넌트가 보여진다.
 
 
@@ -177,6 +181,11 @@ class App extends Component {
 
 export default App;
 ```
+
+결과
+
+![img](\assets\images\react\splitting.png)
+
 
 App 컴포넌트에 버튼 하나를 만들고 위의 컴포넌트를 호출하도록 해보자
 버튼을 누르면 비동기적으로 SplitMe를 불러와서 state 에 담는다
