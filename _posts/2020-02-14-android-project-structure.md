@@ -42,6 +42,7 @@ date: "2020-02-14 17:35"
   각 클래스들이 실행될 수 있는 조건을 기술한다.
 
 
+
   b. java 패키지
   <!-- activity 스크린샷. -->
   ![img](\assets\images\android\MainActivity.png)
@@ -49,8 +50,9 @@ date: "2020-02-14 17:35"
   '안드로이드를 프로그래밍한다.' 라고 말하는 부분은 이곳을 수정한다는 얘기와 다르지 않다.
   어플리케이션이 작동하는 방식에 대해 정의하는 java 파일은 모두 이곳에 작성한다.
 
-  setContentView(R.layout.activity_main); 의 코드가 해당 java 파일에서 작성한 코드들를
-  실행할 화면을 지정하는 것인데, 때문에 기본적으로 'Activity' 파일 하나에 뒤에 설명 할 xml파일이 한쌍이 된다.
+  setContentView(R.layout.activity_main); 의 코드가 해당 java 파일을
+  실행할 화면을 지정하는 것인데, 때문에 기본적으로 'Activity' 파일 하나와 'xml' 파일이 한쌍이 된다.
+
 
 
   c. activity_main.xml
@@ -61,6 +63,8 @@ date: "2020-02-14 17:35"
   이곳이 사용자가 보게 될 UI 화면이다.
 
 
-  프로젝트 구조로 볼 때 기억해야 할 것은 '<Application>' 위에 '<Activity>' 가 실행된다는 것과
+
+
+  안드로이드 프로젝트 구조면에서 볼 때 기억해야 할 것은 '<Application>' 위에 '<Activity>' 가 실행된다는 것과
   기능은 'Activity' 에서 UI는 'xml' 에서 작성한다는 것, 그리고 '<Activity>' 마다 'xml' 파일이 연결되어 있다는 것이다.
   따라서 새로운 화면을 만들때 'xxx_Activity.java' 파일을 만들고 그 파일에 activity_xxx.xml 파일을 연결해 주면 되는 것이다.
