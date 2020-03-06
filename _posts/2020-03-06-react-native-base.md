@@ -69,9 +69,10 @@ export default class ButtonExample extends Component {
     );
   }
 }
+기본 사용방식은 <Container> 안에 <Header>, <Content> 를 넣어 사용한다
+
 ```
 
-기본 사용방식은 <Container> 안에 <Header>, <Content> 를 넣어 사용한다
 
 자세한 사용방법은 아래 공식 홈페이지에 설명되어 있다.
 https://docs.nativebase.io/Components.html#button-def-headref
