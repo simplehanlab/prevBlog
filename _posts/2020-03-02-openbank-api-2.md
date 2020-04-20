@@ -9,7 +9,6 @@ tags:
   - openbanking
   - 오픈뱅킹
 date: "2020-02-28 18:00"
-
 ---
 
 #### **사용자 인증**
@@ -126,16 +125,3 @@ HashMap<String, String> authHeaders = new HashMap<>();
     String scope = (String) authRes.get("scope");
     String tokenType = (String) authRes.get("token_type");
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
