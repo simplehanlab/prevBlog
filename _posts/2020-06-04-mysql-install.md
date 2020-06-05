@@ -14,7 +14,8 @@ MySQL 설치방법
 ## MySQL 다운받기
 
 ※ MySQL 사이트에서 다운로드 한다.
-주소 : [http://www.mysql.com/](http://www.mysql.com/)
+
+[http://www.mysql.com/](http://www.mysql.com/)
 
 ![img](\assets\images\database\download01.png)
 DOWNLOADS 탭 하단부 MySQL Community (GPL) Downloads 클릭
