@@ -66,11 +66,8 @@ MySQL Installer for Windows 클릭
 
 ## MySQL 한글(UTF8) 설정하기
 
-※ 설치 전 필요에 맞게 설정 후 설치를 진행한다.
-
-## 데이터셋 설정 확인
-
-#### [MySQL Workbench 확인]
+#### 데이터셋 설정 확인
+#### [1. MySQL Workbench 확인]
 
 1. 'Navigator' 목록에서 'Status and System Variables' 를 선택한다
 2. 오른쪽탭(System Variables)을 선택하고 'character' 를 검색한다
@@ -88,7 +85,7 @@ MySQL Installer for Windows 클릭
 다시 workbench로 확인하면 utf8로 설정된 것을 볼 수 있다
 
 
-#### [MySQL 콘솔 확인]
+#### [2. MySQL 콘솔 확인]
 
 
 ![img](\assets\images\database\download17.png)
