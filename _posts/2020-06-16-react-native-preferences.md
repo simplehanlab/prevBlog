@@ -6,7 +6,7 @@ categories:
   - react-native
 tags:
   - react-native
-date: "2020-06-05 10:40"
+date: "2020-06-16 16:40"
 ---
 
 # react-native 환경설정
