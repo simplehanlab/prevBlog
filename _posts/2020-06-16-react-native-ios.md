@@ -1,6 +1,6 @@
 ---
 
-title: "Mac 에서 React Native 환경설정"
+title: "Mac 에서 React Native 개발 환경 세팅"
 comments: true
 categories:
   - react-native
@@ -10,9 +10,6 @@ tags:
   - ios
 date: "2020-06-16 18:12"
 ---
-
-# Mac 에서 React Native 개발 환경 세팅
-
 
 ## Homebrew 설치
 
