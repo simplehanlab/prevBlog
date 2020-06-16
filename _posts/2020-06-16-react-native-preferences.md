@@ -98,3 +98,7 @@ date: "2020-06-16 16:40"
 
 ![img](\assets\images\react\react-native-android\react-native-android-11.png)
 
+
+
+
+생성된 프로젝트의 App.js가 실행되는 것을 볼 수 있다
