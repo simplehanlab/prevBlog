@@ -26,7 +26,12 @@ date: "2020-06-16 16:40"
 
 
 [https://developer.android.com/studio/?hl=ko](https://developer.android.com/studio/?hl=ko)
+
+
+
+
 설치 후 실행하면 SDK를 자동으로 설치한다
+
 
 
 
