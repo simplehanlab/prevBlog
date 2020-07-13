@@ -39,3 +39,7 @@ date: "2020-07-13 18:33"
 추가적인 커스터마이징시 위젯에서 html태그를 생성해 임의로 추가하여 사용 할 수도 있습니다.
 
 ![img](\assets\images\wordpress\a7.png)
+
+그리고 사이트에서 사용되는 이미지의 관리는 미디어 라이브러리를 통해 가능합니다.
+
+![img](\assets\images\wordpress\a8.png)
