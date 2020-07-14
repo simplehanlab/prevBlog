@@ -20,8 +20,11 @@ date: "2020-07-13 18:33"
 과정의 이미지는 다음과 같습니다.
 
 ![img](\assets\images\wordpress\a1.png)
+
 ![img](\assets\images\wordpress\a2.png)
+
 ![img](\assets\images\wordpress\a3.png)
+
 ![img](\assets\images\wordpress\a4.png)
 
 이러한 과정을 거쳐 최종적으로 무료로 시작을 눌러 완료 할 수 있습니다. (유료 호스팅시 결제를 통해 완료도 가능합니다.)
