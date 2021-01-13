@@ -1,5 +1,5 @@
 ---
-title: "CentOS 7 Gitlab 설치 및 설정(1)"
+title: "CentOS 7 Gitlab 설치 및 설정(1) - Gitlab 설치하기"
 comments: true
 categories:
   - linux
@@ -7,13 +7,10 @@ tags:
   - gitlab
 date: "2021-01-13 12:45"
 ---
-### CentOS 7 Gitlab 설치 및 설정(1)
+### CentOS 7 Gitlab 설치 및 설정(1) - Gitlab 설치하기
 
 OS : CentOS 7
-
 VERSION : gitlab-ce (community edition - 무료버전)
-
-
 
 #### 1. Gitlab 설치시 필요한 패키지 설치
 
@@ -82,3 +79,11 @@ sudo systemctl start postfix
 3. 설치 완료후 EXTERNAL_URL 에 설정된 주소로 접속 후 Gitlab 페이지 확인 
 
 4. 초기 페이지 에서 root 의 패스워드를 새로 지정하기 위한 페이지가 나온다. 
+
+#### 3. Gitlab 명령어
+
+```shell
+sudo gitlab-ctl stop				// gitlab 중지
+sudo gitlab-ctl reconfigure			// 설정 적용
+sudo gitlab-ctl restart				// gitlab 재시작
+```
