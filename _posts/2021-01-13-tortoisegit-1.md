@@ -13,7 +13,7 @@ date: "2021-01-13 15:00"
 
 ## ●	TortoiseGit 이란
 
-윈도우에서 GUI환경을 이용해서 Git을 제어할 수 있도록 도와주는 버전관리 시스템
+윈도우에서 GUI환경을 이용해서 Git을 제어할 수 있도록 도와주는 버전관리 시스템이다
 때문에 Git은 먼저 설치되어 있어야 한다
 
  
@@ -23,7 +23,9 @@ date: "2021-01-13 15:00"
 
 ![img](\assets\images\tortoisegit\tortoise01.png)
 
-주소 : https://git-scm.com/
+[https://git-scm.com/](주소 : https://git-scm.com/)
+
+
 
 
 
@@ -108,7 +110,7 @@ Launch Git Bash에 체크하고 Finish 하면 Git Bash가 실행된다
 1.	TortoiseGit 다운로드
 
 Windows 환경에 맞는 설치 파일을 다운로드
-다운로드 : https://tortoisegit.org/download/
+[https://tortoisegit.org/download/](다운로드 : https://tortoisegit.org/download/)
 
 ![img](\assets\images\tortoisegit\tortoise16.png)
 
