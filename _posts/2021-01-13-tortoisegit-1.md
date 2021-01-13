@@ -1,6 +1,6 @@
 ---
 
-title: "TortoiseGit 설치 및 사용법"
+title: "TortoiseGit 설치방법"
 comments: true
 categories:
   - web
@@ -9,7 +9,7 @@ tags:
 date: "2021-01-13 14:00"
 ---
 
-# ※	TortoiseGit 설치 및 사용방법
+# ※	TortoiseGit 설치방법
 
 ## ●	TortoiseGit 이란
 
@@ -169,3 +169,4 @@ Git의 실행파일 위치를 입력해야 한다. Git을 먼저 설치하였다
 ![img](\assets\images\tortoisegit\tortoise24.png)
 
 설치 완료
+
