@@ -6,7 +6,7 @@ categories:
   - web
 tags:
   - TortoiseGit
-date: "2021-01-13 14:30"
+date: "2021-01-13 15:30"
 ---
 
 # ※	TortoiseGit 사용방법

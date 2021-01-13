@@ -6,7 +6,7 @@ categories:
   - web
 tags:
   - TortoiseGit
-date: "2021-01-13 14:00"
+date: "2021-01-13 15:00"
 ---
 
 # ※	TortoiseGit 설치방법
